@@ -1,3 +1,10 @@
+// const computerGuessDisplay = document.getElementById('computer-guess');
+// const humanScoreDisplay = document.getElementById('human-score');
+// const computerScoreDisplay = document.getElementById('computer-score');
+// const targetNumberDisplay = document.getElementById('target-number');
+// const computerWinsDisplay = document.getElementById('computer-wins');
+
+
 let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
@@ -23,7 +30,9 @@ function generateTarget(){
     
        if(currentHumanGuess > 9 || currentHumanGuess < 0 ){
            alert("Your guess should be between the range of 0-9")
-           computerGuessDisplay = null;
+           computerGuessDisplay.innerText = "?"; 
+           targetNumberDisplay.innerText ="?";  
+         computerGuessDisplay = null;
            return computerGuess
        }else{
         if(humanGuess === compGuess){
