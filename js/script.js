@@ -13,15 +13,16 @@ function generateTarget(){
 
 
 
+
 // compareGuesses function
 
  function compareGuesses(currentHumanGuess,computerGuess,target){
            
     let humanGuess = Math.abs(currentHumanGuess-target)
        let compGuess = Math.abs(computerGuess-target)
-       if(currentHumanGuess > 9){
+       if(currentHumanGuess > 9 || currentHumanGuess < 0 ){
         alert("Your guess should be between 0-9")
-    }
+    }else{
         if(humanGuess === compGuess){
             return true
         }else if(humanGuess > compGuess){
@@ -29,8 +30,8 @@ function generateTarget(){
         }else{
             return true
         }
-
-
+    }
+        
 
 
  }

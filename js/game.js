@@ -12,12 +12,11 @@ const computerWinsDisplay = document.getElementById('computer-wins');
 
 const guessButton = document.getElementById('guess');
 const nextRoundButton = document.getElementById('next-round')
-console.log(computerGuessDisplay)
-console.log(humanScoreDisplay)
+
 guessButton.addEventListener('click', function (){
   // Generate the target value
   target = generateTarget();
-  console.log(target)
+
   // Retrieve the player's guess
   const currentHumanGuess = humanGuessInput.value;
   // Make a random 'computer guess'
