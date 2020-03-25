@@ -20,19 +20,21 @@ function generateTarget(){
            
     let humanGuess = Math.abs(currentHumanGuess-target)
        let compGuess = Math.abs(computerGuess-target)
+    
        if(currentHumanGuess > 9 || currentHumanGuess < 0 ){
-        alert("Your guess should be between 0-9")
-    }else{
+           alert("Your guess should be between the range of 0-9")
+           computerGuessDisplay = null;
+           return computerGuess
+       }else{
         if(humanGuess === compGuess){
-            return true
-        }else if(humanGuess > compGuess){
-            return false
-        }else{
-            return true
-        }
-    }
-        
-
+                     return true
+                 }else if(humanGuess > compGuess){
+                     return false
+                 }else{
+                     return true
+                }
+       }
+    
 
  }
 
